@@ -11,6 +11,11 @@ import java.util.List;
 
 @Controller
 public class CarController {
+    private ServiceImpl service;
+
+    public CarController(ServiceImpl service) {
+        this.service = service;
+    }
 
     @GetMapping(value = "/cars")
     public String getCars(@RequestParam(
